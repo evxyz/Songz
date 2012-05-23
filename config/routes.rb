@@ -1,4 +1,6 @@
 Songz::Application.routes.draw do
+  resources :songs_dbs
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

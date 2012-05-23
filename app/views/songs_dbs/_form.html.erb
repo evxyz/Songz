@@ -1,0 +1,29 @@
+<%= form_for(@songs_db) do |f| %>
+  <% if @songs_db.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@songs_db.errors.count, "error") %> prohibited this songs_db from being saved:</h2>
+
+      <ul>
+      <% @songs_db.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :artist %><br />
+    <%= f.text_field :artist %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

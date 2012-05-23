@@ -1,0 +1,27 @@
+<h1>Listing songs_dbs</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Comments</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @songs_dbs.each do |songs_db| %>
+  <tr>
+    <td><%= songs_db.title %></td>
+    <td><%= songs_db.artist %></td>
+    <td><%= songs_db.comments %></td>
+    <td><%= link_to 'Show', songs_db %></td>
+    <td><%= link_to 'Edit', edit_songs_db_path(songs_db) %></td>
+    <td><%= link_to 'Destroy', songs_db, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Songs db', new_songs_db_path %>
