@@ -11,3 +11,17 @@
  *= require_self
  *= require_tree .
 */
+table{
+	border: 3px solid black;
+	column-rule: 3px solid black;
+	
+}
+body{
+	border: 3px solid black;
+}
+td{
+	border: 2px dotted gray;
+}
+td{
+	background-color: #FDFCDC;
+}

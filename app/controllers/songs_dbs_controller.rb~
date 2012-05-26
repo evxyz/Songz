@@ -3,7 +3,7 @@ class SongsDbsController < ApplicationController
   # GET /songs_dbs.json
   def index
     @songs_dbs = SongsDb.all
-#raise @songs_dbs.inspect
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @songs_dbs }
@@ -19,7 +19,7 @@ class SongsDbsController < ApplicationController
       format.json { render json: @songs_db }
     end
     
-    
+raise params.inspect
   end
 
   # GET /songs_dbs/new
